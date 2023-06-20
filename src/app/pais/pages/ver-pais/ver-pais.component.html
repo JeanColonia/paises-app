@@ -1,0 +1,61 @@
+<div class="alert alert-info" *ngIf="!pais; else divPais">
+  Cargando información, espere por favor...
+</div>
+
+<ng-template #divPais>
+  <div class="row">
+    <div class="col-12">
+      <h1>
+        Pais: <small>{{ pais.name.common }}</small>
+      </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <h3>Bandera</h3>
+      <img [src]="pais.flags.png" class="img img-thumbnail" alt="" />
+    </div>
+
+    <div class="col">
+      <h3>Información:</h3>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Población</strong> {{ pais.population | number }}
+        </li>
+        <li class="list-group-item">
+          <strong>Código numérico</strong> {{ pais.ccn3 | number }}
+        </li>
+        <li class="list-group-item">
+          <strong>Código alpha3</strong> {{ pais.cca3  }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Traducciones</h3>
+  <span class="badge bg-primary mr-5">{{pais.translations['ara'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['bre'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['ces'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['cym'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['deu'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['est'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['fin'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['fra'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['hun'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['ita'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['jpn'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['kor'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['nld'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['per'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['pol'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['por'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['rus'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['slk'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['spa'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['swe'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['tur'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['urd'].common}}</span>
+  <span class="badge bg-primary mr-5">{{pais.translations['zho'].common}}</span>
+</ng-template>
